@@ -1,9 +1,20 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>My Website</title>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <meta charset="UTF-8">
+    <title>MEMES MARKET</title>
 </head>
 <body>
-   <h1>{{  gg }}</h1>
-    <h1>{{ gg1 }}</h1>
+{#<div class what>#}
+{#    <h1>Что?</h1>#}
+{#</div>#}
+{#<div class toWhat>#}
+{#    <h1>Во что?</h1>#}
+{#</div>#}
+<div class result>
+    <h1>Результат</h1>
+    <h1>{{ result }}</h1>
+</div>
 </body>
 </html>
