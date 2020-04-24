@@ -3,18 +3,13 @@
 <head>
     <link rel="stylesheet" href="style.css" type="text/css"/>
     <meta charset="UTF-8">
-    <title>MEMES MARKET</title>
+    <title>Just Memes</title>
 </head>
 <body>
-{#<div class what>#}
-{#    <h1>Что?</h1>#}
-{#</div>#}
-{#<div class toWhat>#}
-{#    <h1>Во что?</h1>#}
-{#</div>#}
-<div class result>
-    <h1>Результат</h1>
-    <h1>{{ result }}</h1>
-</div>
+<h1>Напишите что-то</h1>
+<form action="/HomePage" method="POST">
+    <input class="form-control" id="something" name="something" placeholder="something" type="text" value=""/>
+    <input id="btn" name="btn" type="submit" class="btn btn-default" value="Go!"/>
+</form>
 </body>
 </html>
