@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+.buttons {
+    background: #fbfffb;
+    text-shadow: 0px 2px 0px rgb(0, 0, 0);
+    font-size: 30px;
+    font-family: 'Russo One', sans-serif;
+    height: 30px;
+    width: 100px;
+    margin-left: 750px;
+    margin-top: -150px;
+    overflow: hidden;
+    display: block;
+    text-align: center;
+    line-height: 0px;
+
+    /*Тень*/
+    -webkit-box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 6px 0px rgba(0, 0, 0, 0.8);
+
+    /*Градиент*/
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    background-image: -ms-linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+    background-image: linear-gradient(top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2));
+}
+
+.mainText {
+    font-family: 'Russo One', sans-serif;
+    margin-bottom: 180px;
+    margin-left: 700px;
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+    text-align: center;
+    background-color: #000000;
+    color: #fbfffb;
+    max-width: 400px;
+    text-align: center;
+}
+
+.mainText span {
+    margin-bottom: 180px;
+    margin-left: 700px;
+    height: 30px;
+    width: 200px;
+    font-size: 20px;
+    text-align: center;
+    padding: 3px 0;
+    line-height: 1.45;
+}
+
+.form-control {
+    background-color: #fbfffb;
+    margin-bottom: 180px;
+    margin-left: 700px;
+    height: 30px;
+    width: 200px;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Russo One', sans-serif;
+}
+
+body {
+    background-color: #000000;
+}

@@ -11,10 +11,10 @@ import java.io.Writer;
 
 
 public class HomePageController {
-    static String cityResult;
+    static String countryResult;
     public static Route getHomePage = (Request request, Response response) -> {
         PebbleEngine engine = new PebbleEngine.Builder().build();
-        PebbleTemplate compiledTemplate = engine.getTemplate("HomePage.pebble");
+        PebbleTemplate compiledTemplate = engine.getTemplate("static/HomePage.pebble");
         Writer writer = new StringWriter();
         compiledTemplate.evaluate(writer);
         String output = writer.toString();
@@ -22,14 +22,14 @@ public class HomePageController {
     };
 
     public static Route postHomePage = (Request request, Response response) -> {
-        String entryCity = request.queryParams("something");
-        cityResult = entryCity;
-        response.redirect("/Weather");
-        return null;
+        String entryCountry = request.queryParams("country");
+        countryResult = entryCountry;
+        response.redirect("/ResultPage");
+        return countryResult();
     };
 
-    public static String cityResult() {
-        return cityResult;
+    public static String countryResult() {
+        return countryResult;
     }
 
 }

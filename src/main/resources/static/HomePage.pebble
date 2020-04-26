@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <meta charset="UTF-8">
+    <title>Corona</title>
+</head>
+<body>
+<div class="mainText">
+    <span><h1>Enter country name</h1></span>
+</div>
+<form action="/HomePage" method="POST">
+    <input class="form-control" id="country" name="country" placeholder="Country name" type="text" value=""/>
+    <input class="buttons" id="buttons" name="buttons" type="submit" value="Go!"/>
+</form>
+</body>
+</html>
