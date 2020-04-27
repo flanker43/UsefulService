@@ -6,7 +6,7 @@
     <title>Corona</title>
 </head>
 <body>
-<div class="mainText">
+<div class="mainTextHome">
     <span><h1>Enter country name</h1></span>
 </div>
 <form action="/HomePage" method="POST">

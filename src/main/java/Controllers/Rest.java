@@ -9,8 +9,6 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.List;
 
 public class Rest {
 
@@ -31,10 +29,10 @@ public class Rest {
         try {
             String resp = response.body().string();
             response.close();
-            List<CountryDto> cD = Arrays.asList(mapper.readValue(resp, CountryDto[].class));
-            for (int i = 0; i<cD.size(); i++){
-                return cD.get(i);
-            }
+//            List<CountryDto> cD = Arrays.asList(mapper.readValue(resp, CountryDto[].class));
+            CountryDto[] cD = mapper.readValue(resp, CountryDto[].class);
+            return cD[0];
+
         } catch (JsonGenerationException e) {
             e.printStackTrace();
         } catch (JsonMappingException e) {

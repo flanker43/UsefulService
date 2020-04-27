@@ -27,13 +27,12 @@ public class ResultPageController {
 
 //        CountryDto cD = new CountryDto();
         Map<String, Object> context = new HashMap<>();
-        context.put("res", "res");
 
-        context.put("country", r.getClient().country);
-        context.put("confirmed", r.getClient().confirmed);
-        context.put("recovered", r.getClient().recovered);
-        context.put("critical", r.getClient().critical);
-        context.put("deaths", r.getClient().deaths);
+        context.put("country", r.getClient().getCountry());
+        context.put("confirmed", r.getClient().getConfirmed());
+        context.put("recovered", r.getClient().getRecovered());
+        context.put("critical", r.getClient().getCritical());
+        context.put("deaths", r.getClient().getDeaths());
 
 //        context.put("country", cD.getCountry());
 //        context.put("confirmed", cD.getConfirmed());
