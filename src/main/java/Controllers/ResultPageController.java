@@ -29,11 +29,11 @@ public class ResultPageController {
         Map<String, Object> context = new HashMap<>();
         context.put("res", "res");
 
-        context.put("country", r.country1);
-        context.put("confirmed", r.confirmed1);
-        context.put("recovered", r.recovered1);
-        context.put("critical", r.critical1);
-        context.put("deaths", r.deaths1);
+        context.put("country", r.getClient().country);
+        context.put("confirmed", r.getClient().confirmed);
+        context.put("recovered", r.getClient().recovered);
+        context.put("critical", r.getClient().critical);
+        context.put("deaths", r.getClient().deaths);
 
 //        context.put("country", cD.getCountry());
 //        context.put("confirmed", cD.getConfirmed());

@@ -9,20 +9,15 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
 
 public class Rest {
 
     private static OkHttpClient client = new OkHttpClient();
-    //  static String response1;
-    static String country1;
-    static long confirmed1;
-    static long recovered1;
-    static long critical1;
-    static long deaths1;
-    static double latitude1;
-    static double longitude1;
+    private static ObjectMapper mapper = new ObjectMapper();
 
-    public void getClient() throws IOException {
+    public CountryDto getClient() throws IOException {
         Request request = new Request.Builder()
                 .url("https://covid-19-data.p.rapidapi.com/country?name=" + HomePageController.countryResult())
                 .get()
@@ -31,21 +26,15 @@ public class Rest {
                 .build();
 
         Response response = client.newCall(request).execute();
-        response.close();
-//        response1 = response.body().string();
 
-        ObjectMapper mapper = new ObjectMapper();
+
         try {
             String resp = response.body().string();
-            CountryDto cD = mapper.readValue(resp, CountryDto.class);
-            System.out.println(cD);
-            country1 = cD.getCountry();
-            confirmed1 = cD.getConfirmed();
-            recovered1 = cD.getRecovered();
-            critical1 = cD.getCritical();
-            deaths1 = cD.getDeaths();
-            latitude1 = cD.getLatitude();
-            longitude1 = cD.getLongitude();
+            response.close();
+            List<CountryDto> cD = Arrays.asList(mapper.readValue(resp, CountryDto[].class));
+            for (int i = 0; i<cD.size(); i++){
+                return cD.get(i);
+            }
         } catch (JsonGenerationException e) {
             e.printStackTrace();
         } catch (JsonMappingException e) {
@@ -53,8 +42,8 @@ public class Rest {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        return null;
     }
-//    static String getResponse1(){
-//        return response1;
-//    }
+
 }
