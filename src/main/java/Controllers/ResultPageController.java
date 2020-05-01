@@ -1,6 +1,5 @@
 package Controllers;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mitchellbosecke.pebble.PebbleEngine;
 import com.mitchellbosecke.pebble.template.PebbleTemplate;
 import spark.Request;
@@ -20,12 +19,6 @@ public class ResultPageController {
         Rest r = new Rest();
         r.getClient();
 
-        ObjectMapper mapper = new ObjectMapper();
-
-//        String resp = r.getResponse1();
-//        CountryDto cD = mapper.readValue(resp, CountryDto.class);
-
-//        CountryDto cD = new CountryDto();
         Map<String, Object> context = new HashMap<>();
 
         context.put("country", r.getClient().getCountry());
@@ -34,11 +27,6 @@ public class ResultPageController {
         context.put("critical", r.getClient().getCritical());
         context.put("deaths", r.getClient().getDeaths());
 
-//        context.put("country", cD.getCountry());
-//        context.put("confirmed", cD.getConfirmed());
-//        context.put("recovered", cD.getRecovered());
-//        context.put("critical", cD.getCritical());
-//        context.put("deaths", cD.getDeaths());
 
         Writer writer = new StringWriter();
         compiledTemplate.evaluate(writer, context);

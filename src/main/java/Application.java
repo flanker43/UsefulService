@@ -14,6 +14,8 @@ public class Application {
         post("/HomePage", postHomePage);
 
         get("/ResultPage", getResultPage);
+
+//        get("/RandomMassge", );
     }
 }
 

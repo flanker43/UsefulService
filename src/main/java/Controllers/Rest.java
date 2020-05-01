@@ -29,7 +29,6 @@ public class Rest {
         try {
             String resp = response.body().string();
             response.close();
-//            List<CountryDto> cD = Arrays.asList(mapper.readValue(resp, CountryDto[].class));
             CountryDto[] cD = mapper.readValue(resp, CountryDto[].class);
             return cD[0];
 
